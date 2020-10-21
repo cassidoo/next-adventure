@@ -9,7 +9,6 @@ export default function CharacterForm() {
       className={styles.form}
       data-netlify="true"
       netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
     >
       <p className={styles.hidden}>
         <label>
@@ -47,7 +46,6 @@ export default function CharacterForm() {
       <p className={styles.submit}>
         <button type="submit">Send</button>
       </p>
-      <div data-netlify-recaptcha="true"></div>
     </form>
   );
 }
