@@ -1,0 +1,53 @@
+import styles from './CharacterForm.module.css';
+
+export default function CharacterForm() {
+  return (
+    <form
+      name="custom"
+      action="/success"
+      method="POST"
+      className={styles.form}
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
+    >
+      <p className={styles.hidden}>
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label htmlFor="yourname">Character name: </label>
+        <br />
+        <input type="text" name="name" id="charname" />
+      </p>
+      <p>
+        <label htmlFor="pronouns">Character pronouns: </label>
+        <br />
+        <input type="radio" id="masc" name="gender" value="masc" />
+        <label htmlFor="masc">He/Him</label>
+        <br />
+        <input type="radio" id="fem" name="gender" value="fem" />
+        <label htmlFor="fem">She/Her</label>
+        <br />
+        <input type="radio" id="nb" name="gender" value="nb" />
+        <label htmlFor="nb">They/Them</label>
+      </p>
+      <p>
+        <label htmlFor="smell">Character's favorite smell: </label>
+        <br />
+        <input type="text" name="smell" id="charsmell" />
+      </p>
+      <p>
+        <label htmlFor="youremail">Your Email: </label>
+        <br />
+        <input type="email" name="email" id="youremail" />
+      </p>
+      <p className={styles.submit}>
+        <button type="submit">Send</button>
+      </p>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+  );
+}

@@ -1,0 +1,21 @@
+.form {
+  max-width: 400px;
+  padding: 20px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form input[type='text'],
+.form input[type='email'] {
+  width: 100%;
+}
+
+.submit {
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}

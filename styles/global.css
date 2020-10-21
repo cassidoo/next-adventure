@@ -21,13 +21,15 @@ a,
 button {
   display: inline-block;
   padding: 10px;
+  background: transparent;
   border: 3px solid white;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
   font-family: 'Arimo', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  animation: intro 4s, chromaticMove 4500ms ease infinite;
+  animation: intro 3s, chromaticMove 4500ms ease infinite;
 }
 
 @keyframes gradientMove {
@@ -44,14 +46,12 @@ button {
 
 @keyframes intro {
   0% {
-    margin-top: -50px;
     opacity: 0;
   }
   50% {
     opacity: 0.3;
   }
   100% {
-    margin-top: 0;
     opacity: 1;
   }
 }

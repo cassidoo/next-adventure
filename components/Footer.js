@@ -10,7 +10,7 @@ export default function Footer() {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 3px solid #3a93af;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -22,5 +22,5 @@ export default function Footer() {
         }
       `}</style>
     </>
-  )
+  );
 }

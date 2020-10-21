@@ -6,3 +6,7 @@
   align-items: center;
   text-align: center;
 }
+
+.container button {
+  margin: 10px;
+}
