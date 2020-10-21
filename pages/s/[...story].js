@@ -10,9 +10,9 @@ const Story = (props) => {
   let { state, send } = useAppContext();
   const router = useRouter();
 
-  if (state.value === 'start' && router.asPath !== '/s/start') {
-    router.push(`/s/start`);
-  }
+  // if (state.value === 'start' && router.asPath !== '/s/start') {
+  //   router.push(`/s/start`);
+  // }
 
   return (
     <Layout>
