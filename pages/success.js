@@ -1,19 +1,16 @@
 import Link from 'next/link';
 import Layout from '@components/Layout';
 import Header from '@components/Header';
-import CharacterForm from '@components/CharacterForm';
 
-export default function Custom() {
+export default function CustomSuccess() {
   return (
     <Layout>
       <Header title="A lonely, code-filled night: Your Turn!" />
       <br />
       <section>
-        Want to add your own personality to the story? Fill out this form to be
-        added to the database!
+        Thanks for your submission! Once propagated you'll see your character in
+        the spooky story.{' '}
       </section>
-      <CharacterForm />
-      Nah? <br />
       <Link href="/">
         <a>Go home</a>
       </Link>

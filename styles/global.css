@@ -21,6 +21,7 @@ a,
 button {
   display: inline-block;
   padding: 10px;
+  margin: 10px;
   background: transparent;
   border: 3px solid white;
   border-radius: 10px;
@@ -47,9 +48,6 @@ button {
 @keyframes intro {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
   }
   100% {
     opacity: 1;

@@ -2,9 +2,13 @@
   font-size: 4em;
   text-shadow: 9px 6px 2px rgba(251, 12, 12, 1),
     0px -3px 3px rgba(12, 79, 251, 0.5), -9px 0px 2px rgba(52, 251, 12, 1);
-  animation: intro 8s, chromaticMove 4500ms ease infinite,
-    pulse 200ms ease 5s infinite;
+  animation: chromaticMove 4500ms ease infinite, pulse 200ms ease 5s infinite;
   margin: 20px;
+}
+
+.zoom {
+  animation: intro 5s, chromaticMove 4500ms ease infinite,
+    pulse 200ms ease 5s infinite;
 }
 
 @keyframes intro {

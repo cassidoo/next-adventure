@@ -5,7 +5,7 @@ import Header from '@components/Header';
 export default function Home() {
   return (
     <Layout>
-      <Header title="A lonely, code-filled night" />
+      <Header title="A lonely, code-filled night" zoom />
       <br />
       <Link href="/s/start">
         <a>get spooky</a>

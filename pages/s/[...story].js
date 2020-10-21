@@ -10,12 +10,16 @@ const Story = (props) => {
   let { state, send } = useAppContext();
   const router = useRouter();
 
-  // if (state.value === 'start' && router.asPath !== '/s/start') {
+  // let trailingPath = router.asPath.substring(
+  //   router.asPath.length - state.event.type.length
+  // );
+
+  // if (trailingPath !== state.event.type) {
   //   router.push(`/s/start`);
   // }
 
   return (
-    <Layout>
+    <Layout story>
       <Storyblock>{state.meta[`spookydev.${state.value}`].story}</Storyblock>
 
       {state.nextEvents
@@ -41,15 +45,15 @@ const Story = (props) => {
   );
 };
 
-export async function getStaticProps() {
-  return {
-    props: {},
-    revalidate: false,
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {},
+//     revalidate: false,
+//   };
+// }
 
-export function getStaticPaths() {
-  return { paths: [], fallback: true };
-}
+// export function getStaticPaths() {
+//   return { paths: [], fallback: true };
+// }
 
 export default Story;
