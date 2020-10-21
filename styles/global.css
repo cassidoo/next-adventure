@@ -1,11 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Vollkorn:ital,wght@0,400;0,700;1,500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Vollkorn', serif;
+  background: black;
+  color: white;
+
+  background: linear-gradient(to bottom, black, black 50%, #222 50%, #222);
+  background-size: 100% 4px;
+  animation: gradientMove 200ms ease infinite;
 }
 
-* {
-  box-sizing: border-box;
+a,
+button {
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  animation: intro 4s, chromaticMove 4500ms ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-size: 100% 4px;
+  }
+  50% {
+    background-size: 100% 2px;
+  }
+  100% {
+    background-size: 100% 4px;
+  }
+}
+
+@keyframes intro {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes chromaticMove {
+  0% {
+    box-shadow: 3px 2px 2px rgba(251, 12, 12, 0.9),
+      0px -1px 3px rgba(12, 79, 251, 0.5), 0px 0px -2px rgba(52, 251, 12, 0.9);
+  }
+  50% {
+    box-shadow: 3px 2px 2px rgba(251, 12, 12, 0.6),
+      0px -1px 3px rgba(12, 79, 251, 0.5), -3px 2px 3px rgba(52, 251, 12, 0.6);
+  }
+  100% {
+    box-shadow: 3px 2px 2px rgba(251, 12, 12, 1),
+      0px -1px 3px rgba(12, 79, 251, 0.5), 2px -1px 2px rgba(52, 251, 12, 1);
+  }
 }

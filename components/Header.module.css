@@ -1,0 +1,57 @@
+.title {
+  font-size: 4em;
+  text-shadow: 9px 6px 2px rgba(251, 12, 12, 1),
+    0px -3px 3px rgba(12, 79, 251, 0.5), -9px 0px 2px rgba(52, 251, 12, 1);
+  animation: intro 8s, chromaticMove 4500ms ease infinite,
+    pulse 200ms ease 5s infinite;
+  margin: 20px;
+}
+
+@keyframes intro {
+  0% {
+    font-size: 3em;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    font-size: 4em;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.9;
+    transform: skewX(0.5deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 1;
+    transform: skewX(0.5deg);
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes chromaticMove {
+  0% {
+    text-shadow: 3px 2px 2px rgba(251, 12, 12, 0.9),
+      0px -1px 3px rgba(12, 79, 251, 0.5), 0px 0px -2px rgba(52, 251, 12, 0.9);
+  }
+  50% {
+    text-shadow: 3px 2px 2px rgba(251, 12, 12, 0.6),
+      0px -1px 3px rgba(12, 79, 251, 0.5), -3px 2px 3px rgba(52, 251, 12, 0.6);
+  }
+  100% {
+    text-shadow: 3px 2px 2px rgba(251, 12, 12, 1),
+      0px -1px 3px rgba(12, 79, 251, 0.5), 2px -1px 2px rgba(52, 251, 12, 1);
+  }
+}
