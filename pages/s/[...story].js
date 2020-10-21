@@ -6,7 +6,7 @@ import Storyblock from '@components/Storyblock';
 
 import { useAppContext } from '@context/AppContext';
 
-const Story = (props) => {
+const Story = () => {
   let { state, send } = useAppContext();
   const router = useRouter();
 
@@ -46,16 +46,5 @@ const Story = (props) => {
     </Layout>
   );
 };
-
-// export async function getStaticProps() {
-//   return {
-//     props: {},
-//     revalidate: false,
-//   };
-// }
-
-// export function getStaticPaths() {
-//   return { paths: [], fallback: true };
-// }
 
 export default Story;
