@@ -4,18 +4,11 @@ export default function CharacterForm() {
   return (
     <form
       name="custom"
-      action="/success"
       method="POST"
       className={styles.form}
       data-netlify="true"
-      netlify-honeypot="bot-field"
     >
-      <p className={styles.hidden}>
-        <label>
-          Don’t fill this out if you're human: <input name="bot-field" />
-        </label>
-      </p>
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="custom" />
       <p>
         <label htmlFor="yourname">Character name: </label>
         <br />
