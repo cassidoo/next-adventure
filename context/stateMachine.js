@@ -22,8 +22,6 @@ export const thirdLevel = {
   callout: 'ask-if-anyone-is-out-there',
 };
 
-export const states = [introVals, firstLevel];
-
 const storyMachine = createMachine({
   id: 'spookydev',
   initial: 'start',

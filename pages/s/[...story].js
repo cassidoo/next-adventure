@@ -4,19 +4,18 @@ import Layout from '@components/Layout';
 import Storyblock from '@components/Storyblock';
 
 import { useAppContext } from '@context/AppContext';
-import { states } from '@context/stateMachine';
 
 const Story = (props) => {
   let { state, send } = useAppContext();
   const router = useRouter();
 
-  // let trailingPath = router.asPath.substring(
-  //   router.asPath.length - state.event.type.length
-  // );
+  let trailingPath = router.asPath.substring(
+    router.asPath.length - state.event.type.length
+  );
 
-  // if (trailingPath !== state.event.type) {
-  //   router.push(`/s/start`);
-  // }
+  if (trailingPath !== state.event.type) {
+    router.push(`/s/start`);
+  }
 
   return (
     <Layout story>

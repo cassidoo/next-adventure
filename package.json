@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "functions": "./bin/copy-functions.js",
     "dev": "next",
     "build": "next build",
-    "postbuild": "next-on-netlify"
+    "postbuild": "next-on-netlify && npm run functions"
   },
   "dependencies": {
     "@xstate/inspect": "^0.1.1",
