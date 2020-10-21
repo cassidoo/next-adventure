@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import Layout from '@components/Layout';
@@ -9,13 +10,15 @@ const Story = (props) => {
   let { state, send } = useAppContext();
   const router = useRouter();
 
-  let trailingPath = router.asPath.substring(
-    router.asPath.length - state.event.type.length
-  );
+  useEffect(() => {
+    let trailingPath = router.asPath.substring(
+      router.asPath.length - state.event.type.length
+    );
 
-  if (trailingPath !== state.event.type) {
-    router.push(`/s/start`);
-  }
+    if (trailingPath !== state.event.type) {
+      router.push(`/s/start`);
+    }
+  }, []);
 
   return (
     <Layout story>
