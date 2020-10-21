@@ -29,19 +29,23 @@ const thirdLevel = {
 };
 
 export const getRandomCharacter = async () => {
-  const character = await fetch(
+  let character = await fetch(
     'https://next-adventure.netlify.app/.netlify/functions/get-character'
-  ).then((res) => res.json());
-
+  )
+    .then((res) => res.json())
+    .then((r) => r);
   return character;
 };
 
-export const storyMachine = () => {
-  let character = getRandomCharacter();
+export const storyMachine = (character) => {
+  console.log('character');
+  console.log(character);
 
-  let { name, pronouns, smell } = character;
+  let name = character?.name;
+  let pronouns = character?.pronouns;
+  let smell = character?.smell;
 
-  // {"name":"Zombie","pronouns":"masc","smell":"Flesh"}
+  console.log(name);
 
   return {
     id: 'spookydev',
@@ -49,9 +53,7 @@ export const storyMachine = () => {
     states: {
       [introVals.start]: {
         meta: {
-          story: `Once upon a time there was a developer ${
-            name ? `named ${name}` : ''
-          } who was working very late at night. Very late at night... on Halloween.`,
+          story: `Once upon a time there was a developer ${name} who was working very late at night. Very late at night... on Halloween.`,
         },
         on: {
           [introVals.kitchen]: introVals.kitchen,
@@ -189,6 +191,6 @@ export const storyMachine = () => {
   };
 };
 
-export const stateMachineFromVars = () => {
-  return createMachine(storyMachine());
+export const stateMachineFromVars = (character) => {
+  return createMachine(storyMachine(character));
 };
