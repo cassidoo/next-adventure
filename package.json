@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@xstate/inspect": "^0.1.1",
     "@xstate/react": "^1.0.1",
     "next": "^9.5.4",
+    "next-on-netlify": "^2.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "xstate": "^4.13.0"
