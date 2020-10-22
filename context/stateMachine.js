@@ -28,24 +28,10 @@ const thirdLevel = {
   callout: 'ask-if-anyone-is-out-there',
 };
 
-export const getRandomCharacter = async () => {
-  let character = await fetch(
-    'https://next-adventure.netlify.app/.netlify/functions/get-character'
-  )
-    .then((res) => res.json())
-    .then((r) => r);
-  return character;
-};
-
 export const storyMachine = (character) => {
-  console.log('character');
-  console.log(character);
-
   let name = character?.name;
   let pronouns = character?.pronouns;
   let smell = character?.smell;
-
-  console.log(name);
 
   return {
     id: 'spookydev',
@@ -53,7 +39,9 @@ export const storyMachine = (character) => {
     states: {
       [introVals.start]: {
         meta: {
-          story: `Once upon a time there was a developer ${name} who was working very late at night. Very late at night... on Halloween.`,
+          story: `Once upon a time there was a developer ${
+            name ? `named ${name}` : ''
+          } who was working very late at night. Very late at night... on Halloween.`,
         },
         on: {
           [introVals.kitchen]: introVals.kitchen,
