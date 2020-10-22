@@ -4,6 +4,7 @@ export default function CharacterForm() {
   return (
     <form
       name="custom"
+      action="/success"
       method="POST"
       className={styles.form}
       data-netlify="true"
