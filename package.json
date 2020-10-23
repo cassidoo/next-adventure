@@ -9,7 +9,6 @@
     "postbuild": "next-on-netlify && npm run functions"
   },
   "dependencies": {
-    "@xstate/inspect": "^0.1.1",
     "@xstate/react": "^1.0.1",
     "next": "^9.5.4",
     "next-on-netlify": "^2.5.1",

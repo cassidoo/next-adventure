@@ -5,9 +5,12 @@ import Layout from '@components/Layout';
 import Storyblock from '@components/Storyblock';
 
 import { useAppContext } from '@context/AppContext';
+import { useMachine } from '@xstate/react';
+import { stateMachineFromVars } from '@context/stateMachine';
 
 const Story = () => {
-  let { state, send } = useAppContext();
+  let { character } = useAppContext();
+  const [state, send] = useMachine(stateMachineFromVars(character));
   const router = useRouter();
 
   useEffect(() => {

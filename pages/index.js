@@ -11,7 +11,7 @@ export default function Home() {
         <a>get spooky</a>
       </Link>
       <Link href="/makeyourown">
-        <a>Contribute a character</a>
+        <a>contribute a character</a>
       </Link>
     </Layout>
   );
