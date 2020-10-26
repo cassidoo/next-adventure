@@ -1,7 +1,7 @@
-# Next Adventure
+![Next Adventure](ghbanner.png)
 
 <p align="center">
-A spooky, crowdsourced, mad-lib, Choose Your Own Adventure story built with Next.js, state machines, and Netlify Forms
+A spooky, crowdsourced, mad-lib, Choose Your Own Adventure story built with Next.js, state machines, Hasura, and Netlify Forms + Functions.
 </p>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f15231a7-3768-4634-a80c-f9d52ce062bf/deploy-status)](https://app.netlify.com/sites/next-adventure/deploys)
