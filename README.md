@@ -6,8 +6,6 @@
   <a href="https://app.netlify.com/sites/next-adventure/deploys"><img src="https://api.netlify.com/api/v1/badges/f15231a7-3768-4634-a80c-f9d52ce062bf/deploy-status" alt="Netlify Status" /></a>
 </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f15231a7-3768-4634-a80c-f9d52ce062bf/deploy-status)](https://app.netlify.com/sites/next-adventure/deploys)
-
 ## What is this?
 
 This is a project that uses [Next.js](https://nextjs.org/), [XState](https://xstate.js.org/), [Hasura](https://hasura.io/), [Netlify Forms](https://www.netlify.com/products/forms/?utm_source=github&utm_medium=nextadventureforms-cs&utm_campaign=devex), and [next-on-netlify](https://github.com/netlify/next-on-netlify).
