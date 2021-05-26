@@ -8,7 +8,7 @@
 
 ## What is this?
 
-This is a project that uses [Next.js](https://nextjs.org/), [XState](https://xstate.js.org/), [Hasura](https://hasura.io/), [Netlify Forms](https://www.netlify.com/products/forms/?utm_source=github&utm_medium=nextadventureforms-cs&utm_campaign=devex), and [next-on-netlify](https://github.com/netlify/next-on-netlify).
+This is a project that uses [Next.js](https://nextjs.org/), [XState](https://xstate.js.org/), [Hasura](https://hasura.io/), and [Netlify Forms](https://www.netlify.com/products/forms/?utm_source=github&utm_medium=nextadventureforms-cs&utm_campaign=devex).
 
 The "story" side of the app is a state machine that pulls a random character from the database and populates their data to make a "Choose your own Adventure" style story. The other side of the app is character submission, in which folks can send their characters to the story database, and their character may be randomly pulled from the database!
 
