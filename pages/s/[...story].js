@@ -19,7 +19,7 @@ const Story = () => {
     );
 
     if (trailingPath !== state.event.type) {
-      router.push(`/s/start`);
+      router.push(`/s/start`, undefined, { shallow: true });
     }
   }, []);
 
